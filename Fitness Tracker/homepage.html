@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker</title>
+    <link rel="stylesheet" href="homepage.css">
+</head>
+
+<body>
+   
+
+    
+    
+    <div class="container">
+        <header>
+            <h1>FitTrack</h1>
+        </header>
+        <section class="goals">
+            <h2>Set Your Goals</h2>
+            <form id="goal-form">
+            <div class="wrapperFlex">
+
+            
+                <div class="wrapperInput">
+                    <label for="goal-type">Goal Type:</label>
+                    <select id="goal-type" name="goal-type">
+                        <option value="workout-duration">Workout Duration (minutes)</option>
+                        <option value="workout-reps">Workout Reps (count)</option>
+                    </select>
+                </div>
+                <div class="wrapperInput">
+                     <label for="goal-amount">Goal Amount:</label>
+                    <input type="number" id="goal-amount" name="goal-amount" required />
+                </div>   
+            </div>
+                <button type="submit">Set Goal</button>
+            </form>
+        </section>
+
+        <section class="workout-log">
+            <h2>Log Your Workout</h2>
+            <form id="workout-form">
+
+
+                <div class="wrapperFlex">
+                    <div class="wrapperInput">
+                    <label for="workout-type">Workout Type:</label>
+                    <input type="text" id="workout-type" name="workout-type" placeholder="e.g. Running" required />
+                    </div>
+                    <div class="wrapperInput">
+
+                    <label for="workout-duration">Workout Duration (minutes):</label>
+                    <input type="number" id="workout-duration" name="workout-duration" required />
+                    </div>
+                    <div class="wrapperInput">
+
+                    <label for="workout-reps">Workout Reps (if applicable):</label>
+                    <input type="number" id="workout-reps" name="workout-reps" />
+                    </div>
+
+                </div>
+                <button type="submit">Log Workout</button>
+            </form>
+        </section>
+
+        <section class="progress">
+            <h2>Your Progress</h2>
+            <div id="goal-progress"></div>
+            <div id="workout-log-list"></div>
+        </section>
+    </div>
+
+    <script src="homepage.js"></script>
+</body>
+
+</html>
